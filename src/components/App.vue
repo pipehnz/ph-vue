@@ -1,45 +1,30 @@
-<template>
-    <div class="intro">
-        <img src="https://vuejs.org/images/logo.png" alt="">
-        <h1>{{ app }}</h1>
-        <small>Plantilla por <a :href="github">@pipehnz</a></small>
-    </div>
+<template lang="pug">
+    .jumbotron
+        .container
+            .row
+                .col.text-center
+                    h1.display-3.font-weight-light PH Vue
+                    p Plantilla basíca para desarrollar con Vue.js y Pug
+                    a.btn.btn-primary(:href='link') Ver más
 </template>
+
 
 <script>
 export default {
     data () {
         return {
-            app: 'Bievenido a tu proyecto de Vue JS 2',
-            github: 'https://github.com/pipehnz'
+            link: 'https://github.com/pipehnz/ph-vue'
         }
     }
 }
 </script>
 
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900i');
+<style lang="scss">
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css');
+    @import url('https://bootswatch.com/4/cosmo/bootstrap.min.css');
+    @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
     * {
         font-family: 'Lato', sans-serif;
     }
-
-    body {
-        margin: 0 auto;
-    }
-
-    .intro {
-        text-align: center;
-    }
-
-    h1 {
-        font-weight: 900;
-        font-style: italic;
-    }
-
-    small {
-        font-weight: 300;
-    }
 </style>
-
-
